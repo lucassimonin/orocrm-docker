@@ -1,0 +1,108 @@
+version: '3.5'
+
+services:
+  certbot:
+    build:
+      context: "docker/certbot"
+      args:
+        UID: ${UID}
+        GUID: ${GUID}
+    volumes:
+      - "./:/srv:cached"
+
+  database:
+    image: mysql:5.7
+    volumes:
+    - "./docker/database:/var/lib/mysql"
+    - "./docker/mysql/conf:/etc/mysql/conf.d"
+    ports:
+    - '3306:3306'
+    environment:
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PWD}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_PWD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+
+  front:
+    build:
+      context: "docker/front"
+      args:
+        UID: ${UID}
+        GUID: ${GUID}
+    volumes:
+      - "./:/srv"
+
+  quality:
+    command: tail -f /dev/null
+    image: mykiwi/phaudit:7.2
+    volumes:
+      - "./:/project"
+
+  language:
+    build:
+      context: "docker/php"
+      args:
+        UID: ${UID}
+        GUID: ${GUID}
+        XDEBUG: ${XDEBUG}
+    expose:
+      - '9000'
+    volumes:
+      - "./:/srv:cached"
+
+
+  mailing:
+    image: mailhog/mailhog
+    expose:
+      - '1025'
+    ports:
+      - '8025:8025'
+
+  redis:
+    image: redis:4.0.11-alpine3.8
+    ports:
+      - '6379:6379'
+
+  server:
+    image: openresty/openresty
+    environment:
+      APP_SERVER_NAME: ${APP_SERVER_NAME}
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - "./docker/nginx/cert:/etc/cert"
+      - "./docker/nginx/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf"
+      - "./docker/nginx/hosts/vhost.dev.conf:/etc/nginx/site-enabled/default.conf"
+      - "./docker/nginx/conf/${SSL_FILE}:/etc/nginx/conf.d/ssl.conf"
+      - "./docker/nginx/conf/ssl.conf:/etc/nginx/conf.d/base_ssl.conf"
+      - "./docker/nginx/conf/fastcgi.conf:/etc/nginx/conf.d/fastcgi.conf"
+      - "./docker/nginx/conf/ws.conf:/etc/nginx/conf.d/ws.conf"
+      - "./docker/nginx/conf/gzip.conf:/etc/nginx/conf.d/gzip.conf"
+      - "./public:/srv/public:cached"
+      - "./logs:/srv/logs"
+
+  sonarqube:
+    image: sonarqube:7.4-community
+    ports:
+      - '9000:9000'
+    environment:
+      SONARQUBE_JDBC_USERNAME: sonar
+      SONARQUBE_JDBC_PASSWORD: sonar
+      SONARQUBE_JDBC_URL: 'jdbc:postgresql://postgres/sonar'
+
+  sonarscanner:
+    build:
+      context: "docker/sonarqube-scanner"
+    ports:
+      - '9002:9002'
+    volumes:
+      - "./:/root/src"
+
+  postgres:
+    image: postgres:9.6-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: sonar
+      POSTGRES_USER: sonar
