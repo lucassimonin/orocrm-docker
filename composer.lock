@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dbe03adc08142f24bf9e358c5090061f",
+    "content-hash": "50084c8f7ec563546f60e1b9154e48b8",
     "packages": [
         {
             "name": "akeneo/batch-bundle",
@@ -54,9 +54,6 @@
                 "Reader",
                 "Writer"
             ],
-            "support": {
-                "source": "https://github.com/laboro/BatchBundle/tree/0.4.8"
-            },
             "time": "2018-03-20T11:52:51+00:00"
         },
         {
@@ -412,8 +409,7 @@
                 "url": "https://api.github.com/repos/HumbleSoftware/Flotr2/zipball/df0ddedcab1a8fdb3a7abafc5fe97819931e7bd5",
                 "reference": "df0ddedcab1a8fdb3a7abafc5fe97819931e7bd5"
             },
-            "type": "bower-asset",
-            "time": "2014-07-21T18:45:41+00:00"
+            "type": "bower-asset"
         },
         {
             "name": "bower-asset/font-awesome",
@@ -628,15 +624,14 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/douglascrockford/JSON-js.git",
-                "reference": "03157639c7a7cddd2e9f032537f346f1a87c0f6d"
+                "reference": "58df70e97f9031c58361d38d59997485e7a693a2"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/douglascrockford/JSON-js/zipball/58df70e97f9031c58361d38d59997485e7a693a2",
                 "reference": "58df70e97f9031c58361d38d59997485e7a693a2"
             },
-            "type": "bower-asset",
-            "time": "2018-07-23T18:12:50+00:00"
+            "type": "bower-asset"
         },
         {
             "name": "bower-asset/jsplumb",
@@ -836,16 +831,16 @@
         },
         {
             "name": "brick/math",
-            "version": "0.8.5",
+            "version": "0.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "510f506185d4c988f97180426ec80fb3dbf51e04"
+                "reference": "44d14bb2a1976b6a165d00eb08823eaa6e8f366e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/510f506185d4c988f97180426ec80fb3dbf51e04",
-                "reference": "510f506185d4c988f97180426ec80fb3dbf51e04",
+                "url": "https://api.github.com/repos/brick/math/zipball/44d14bb2a1976b6a165d00eb08823eaa6e8f366e",
+                "reference": "44d14bb2a1976b6a165d00eb08823eaa6e8f366e",
                 "shasum": ""
             },
             "require": {
@@ -875,7 +870,7 @@
                 "brick",
                 "math"
             ],
-            "time": "2019-02-12T10:40:15+00:00"
+            "time": "2019-04-11T12:03:33+00:00"
         },
         {
             "name": "components/jquery",
@@ -1290,69 +1285,6 @@
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
             "time": "2017-02-14T19:40:03+00:00"
-        },
-        {
-            "name": "defuse/php-encryption",
-            "version": "v2.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/defuse/php-encryption.git",
-                "reference": "0f407c43b953d571421e0020ba92082ed5fb7620"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/defuse/php-encryption/zipball/0f407c43b953d571421e0020ba92082ed5fb7620",
-                "reference": "0f407c43b953d571421e0020ba92082ed5fb7620",
-                "shasum": ""
-            },
-            "require": {
-                "ext-openssl": "*",
-                "paragonie/random_compat": ">= 2",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "nikic/php-parser": "^2.0|^3.0|^4.0",
-                "phpunit/phpunit": "^4|^5"
-            },
-            "bin": [
-                "bin/generate-defuse-key"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Defuse\\Crypto\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Hornby",
-                    "email": "taylor@defuse.ca",
-                    "homepage": "https://defuse.ca/"
-                },
-                {
-                    "name": "Scott Arciszewski",
-                    "email": "info@paragonie.com",
-                    "homepage": "https://paragonie.com"
-                }
-            ],
-            "description": "Secure PHP Encryption Library",
-            "keywords": [
-                "aes",
-                "authenticated encryption",
-                "cipher",
-                "crypto",
-                "cryptography",
-                "encrypt",
-                "encryption",
-                "openssl",
-                "security",
-                "symmetric key cryptography"
-            ],
-            "time": "2018-07-24T23:27:56+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -2348,16 +2280,16 @@
         },
         {
             "name": "doctrine/persistence",
-            "version": "1.1.1",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
-                "reference": "3da7c9d125591ca83944f477e65ed3d7b4617c48"
+                "reference": "c0f1c17602afc18b4cbd8e1c8125f264c9cf7d38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/3da7c9d125591ca83944f477e65ed3d7b4617c48",
-                "reference": "3da7c9d125591ca83944f477e65ed3d7b4617c48",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/c0f1c17602afc18b4cbd8e1c8125f264c9cf7d38",
+                "reference": "c0f1c17602afc18b4cbd8e1c8125f264c9cf7d38",
                 "shasum": ""
             },
             "require": {
@@ -2426,7 +2358,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2019-04-23T08:28:24+00:00"
+            "time": "2018-11-21T00:33:13+00:00"
         },
         {
             "name": "doctrine/reflection",
@@ -4487,64 +4419,6 @@
             "time": "2018-03-19T10:34:40+00:00"
         },
         {
-            "name": "lcobucci/jwt",
-            "version": "3.2.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lcobucci/jwt.git",
-                "reference": "82be04b4753f8b7693b62852b7eab30f97524f9b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/82be04b4753f8b7693b62852b7eab30f97524f9b",
-                "reference": "82be04b4753f8b7693b62852b7eab30f97524f9b",
-                "shasum": ""
-            },
-            "require": {
-                "ext-openssl": "*",
-                "php": ">=5.5"
-            },
-            "require-dev": {
-                "mdanter/ecc": "~0.3.1",
-                "mikey179/vfsstream": "~1.5",
-                "phpmd/phpmd": "~2.2",
-                "phpunit/php-invoker": "~1.1",
-                "phpunit/phpunit": "~4.5",
-                "squizlabs/php_codesniffer": "~2.3"
-            },
-            "suggest": {
-                "mdanter/ecc": "Required to use Elliptic Curves based algorithms."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Lcobucci\\JWT\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Luís Otávio Cobucci Oblonczyk",
-                    "email": "lcobucci@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A simple library to work with JSON Web Token and JSON Web Signature",
-            "keywords": [
-                "JWS",
-                "jwt"
-            ],
-            "time": "2018-11-11T12:22:26+00:00"
-        },
-        {
             "name": "leafo/scssphp",
             "version": "v0.6.7",
             "source": {
@@ -4596,133 +4470,6 @@
                 "stylesheet"
             ],
             "time": "2017-02-23T05:07:33+00:00"
-        },
-        {
-            "name": "league/event",
-            "version": "2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/event.git",
-                "reference": "d2cc124cf9a3fab2bb4ff963307f60361ce4d119"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/event/zipball/d2cc124cf9a3fab2bb4ff963307f60361ce4d119",
-                "reference": "d2cc124cf9a3fab2bb4ff963307f60361ce4d119",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "henrikbjorn/phpspec-code-coverage": "~1.0.1",
-                "phpspec/phpspec": "^2.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Event\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Frank de Jonge",
-                    "email": "info@frenky.net"
-                }
-            ],
-            "description": "Event package",
-            "keywords": [
-                "emitter",
-                "event",
-                "listener"
-            ],
-            "time": "2018-11-26T11:52:41+00:00"
-        },
-        {
-            "name": "league/oauth2-server",
-            "version": "7.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/oauth2-server.git",
-                "reference": "c7f499849704ebe2c60b45b6d6bb231df5601d4a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-server/zipball/c7f499849704ebe2c60b45b6d6bb231df5601d4a",
-                "reference": "c7f499849704ebe2c60b45b6d6bb231df5601d4a",
-                "shasum": ""
-            },
-            "require": {
-                "defuse/php-encryption": "^2.1",
-                "ext-openssl": "*",
-                "lcobucci/jwt": "^3.2.2",
-                "league/event": "^2.1",
-                "php": ">=7.0.0",
-                "psr/http-message": "^1.0.1"
-            },
-            "replace": {
-                "league/oauth2server": "*",
-                "lncd/oauth2": "*"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^0.9.2",
-                "phpstan/phpstan-phpunit": "^0.9.4",
-                "phpstan/phpstan-strict-rules": "^0.9.0",
-                "phpunit/phpunit": "^6.3 || ^7.0",
-                "roave/security-advisories": "dev-master",
-                "zendframework/zend-diactoros": "^1.3.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "League\\OAuth2\\Server\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alex Bilbie",
-                    "email": "hello@alexbilbie.com",
-                    "homepage": "http://www.alexbilbie.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Andy Millington",
-                    "email": "andrew@noexceptions.io",
-                    "homepage": "https://www.noexceptions.io",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A lightweight and powerful OAuth 2.0 authorization and resource server library with support for all the core specification grants. This library will allow you to secure your API with OAuth and allow your applications users to approve apps that want to access their data from your API.",
-            "homepage": "https://oauth2.thephpleague.com/",
-            "keywords": [
-                "Authentication",
-                "api",
-                "auth",
-                "authorisation",
-                "authorization",
-                "oauth",
-                "oauth 2",
-                "oauth 2.0",
-                "oauth2",
-                "protect",
-                "resource",
-                "secure",
-                "server"
-            ],
-            "time": "2019-03-29T18:19:35+00:00"
         },
         {
             "name": "lexik/maintenance-bundle",
@@ -5321,67 +5068,6 @@
             "version": "1.29.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nelmio/NelmioSecurityBundle.git",
-                "reference": "fe1d31eb23c13e0918de9a66df9d315648c5d3d1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioSecurityBundle/zipball/fe1d31eb23c13e0918de9a66df9d315648c5d3d1",
-                "reference": "fe1d31eb23c13e0918de9a66df9d315648c5d3d1",
-                "shasum": ""
-            },
-            "require": {
-                "paragonie/random_compat": "~1.0|~2.0",
-                "symfony/framework-bundle": "~2.3|~3.0|~4.0",
-                "symfony/security": "~2.3|~3.0|~4.0",
-                "ua-parser/uap-php": "^3.4.4"
-            },
-            "require-dev": {
-                "doctrine/cache": "^1.0",
-                "psr/cache": "^1.0",
-                "symfony/phpunit-bridge": "^3.2|~4.0",
-                "symfony/yaml": "~2.3|~3.0|~4.0",
-                "twig/twig": "^1.24"
-            },
-            "suggest": {
-                "ua-parser/uap-php": "To allow adapt CSP directives given the user-agent"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Nelmio\\SecurityBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nelmio",
-                    "homepage": "http://nelm.io"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://github.com/nelmio/NelmioSecurityBundle/contributors"
-                }
-            ],
-            "description": "Extra security-related features for Symfony: signed/encrypted cookies, HTTPS/SSL/HSTS handling, cookie session storage, ...",
-            "keywords": [
-                "security"
-            ],
-            "time": "2018-03-21T14:33:42+00:00"
-        },
-        {
-            "name": "nesbot/carbon",
-            "version": "1.29.2",
-            "source": {
-                "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
                 "reference": "ed6aa898982f441ccc9b2acdec51490f2bc5d337"
             },
@@ -5479,18 +5165,6 @@
             },
             "require": {
                 "npm-asset/jquery": ">=1.6.0,<2.0.0"
-            },
-            "type": "npm-asset",
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "npm-asset/overlayscrollbars",
-            "version": "1.6.3",
-            "dist": {
-                "type": "tar",
-                "url": "https://registry.npmjs.org/overlayscrollbars/-/overlayscrollbars-1.6.3.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -5642,11 +5316,17 @@
         },
         {
             "name": "oro/calendar-bundle",
-            "version": "dev-master",
+            "version": "3.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCalendarBundle.git",
+                "reference": "8657e940fe2776e54ca3a6cd6a319f7d6c1ad028"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/calendar",
-                "reference": "05a8f52ca30cc9e61842f1cdba1e1cea836bce73"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCalendarBundle/zipball/8657e940fe2776e54ca3a6cd6a319f7d6c1ad028",
+                "reference": "8657e940fe2776e54ca3a6cd6a319f7d6c1ad028",
+                "shasum": ""
             },
             "require": {
                 "bower-asset/fullcalendar": "3.4.0",
@@ -5655,7 +5335,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -5680,15 +5360,26 @@
             "keywords": [
                 "Calendar",
                 "Oro"
-            ]
+            ],
+            "support": {
+                "source": "https://github.com/oroinc/OroCalendarBundle/tree/3.1",
+                "issues": "https://github.com/oroinc/OroCalendarBundle/issues"
+            },
+            "time": "2019-04-17T09:45:09+00:00"
         },
         {
             "name": "oro/crm",
-            "version": "dev-master",
+            "version": "3.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/crm.git",
+                "reference": "1e8652fd589c326a1a80e8a2836f1c21a36b04eb"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/crm",
-                "reference": "bb6deaa7ae88f3ea1f47ab81343ec020825acb0e"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/crm/zipball/1e8652fd589c326a1a80e8a2836f1c21a36b04eb",
+                "reference": "1e8652fd589c326a1a80e8a2836f1c21a36b04eb",
+                "shasum": ""
             },
             "require": {
                 "oro/calendar-bundle": "~3.1.1",
@@ -5698,27 +5389,25 @@
                 "oro/platform": "~3.1.1"
             },
             "require-dev": {
-                "behat/behat": "3.4.*",
-                "behat/mink-extension": "2.3.*",
+                "behat/behat": "3.2.2",
+                "behat/mink-extension": "2.2.*",
                 "behat/mink-selenium2-driver": "1.*",
-                "behat/symfony2-extension": "2.1.*",
-                "friendsofphp/php-cs-fixer": "2.12.*",
-                "johnkary/phpunit-speedtrap": "2.0.*",
-                "mybuilder/phpunit-accelerator": "2.0.*",
-                "nelmio/alice": "2.3.*",
-                "oro/twig-inspector": "1.0.*",
+                "behat/symfony2-extension": "2.1.1",
+                "friendsofphp/php-cs-fixer": "2.1.*",
+                "johnkary/phpunit-speedtrap": "1.0.*",
+                "mybuilder/phpunit-accelerator": "1.2.*",
                 "phpmd/phpmd": "2.6.*",
-                "phpunit/phpcov": "4.0.*",
-                "phpunit/phpunit": "6.5.*",
-                "sebastian/phpcpd": "3.0.*",
-                "sensio/generator-bundle": "3.1.*",
-                "squizlabs/php_codesniffer": "3.3.*",
+                "phpunit/phpcov": "3.1.*",
+                "phpunit/phpunit": "5.7.*",
+                "sebastian/phpcpd": "dev-master#cff7f36c2ae89d59987de25d14fd41a72dd4a703 as 3.1.0",
+                "sensio/generator-bundle": "3.1.2",
+                "squizlabs/php_codesniffer": "2.8.*",
                 "symfony/phpunit-bridge": "3.4.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -5739,15 +5428,26 @@
                 }
             ],
             "description": "OroCRM",
-            "homepage": "https://github.com/oroinc/crm.git"
+            "homepage": "https://github.com/oroinc/crm.git",
+            "support": {
+                "source": "https://github.com/oroinc/crm/tree/3.1",
+                "issues": "https://github.com/oroinc/crm/issues"
+            },
+            "time": "2019-04-17T09:43:11+00:00"
         },
         {
             "name": "oro/crm-call-bundle",
-            "version": "dev-master",
+            "version": "3.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMCallBundle.git",
+                "reference": "3879041c4f046213089e33860491fa6d944f9268"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/call",
-                "reference": "41603c426143c14eee829f230fa341e7d97667bb"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMCallBundle/zipball/3879041c4f046213089e33860491fa6d944f9268",
+                "reference": "3879041c4f046213089e33860491fa6d944f9268",
+                "shasum": ""
             },
             "require": {
                 "oro/platform": "~3.1.1"
@@ -5755,7 +5455,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -5780,15 +5480,26 @@
             "keywords": [
                 "Call",
                 "Oro"
-            ]
+            ],
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMCallBundle/tree/3.1",
+                "issues": "https://github.com/oroinc/OroCRMCallBundle/issues"
+            },
+            "time": "2019-04-17T09:46:00+00:00"
         },
         {
             "name": "oro/crm-dotmailer",
-            "version": "dev-master",
+            "version": "3.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMDotmailerBundle.git",
+                "reference": "0772fa383de7c54b57fe5d6590ac92ad13dd2636"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/dotmailer",
-                "reference": "41404986bd6a83c4c40961823c88fbaa20dcd49e"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMDotmailerBundle/zipball/0772fa383de7c54b57fe5d6590ac92ad13dd2636",
+                "reference": "0772fa383de7c54b57fe5d6590ac92ad13dd2636",
+                "shasum": ""
             },
             "require": {
                 "oro/crm": "~3.1.1",
@@ -5798,7 +5509,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -5819,15 +5530,26 @@
                 }
             ],
             "description": "Oro Dotmailer integration",
-            "homepage": "https://github.com/oroinc/OroCRMDotmailerBundle.git"
+            "homepage": "https://github.com/oroinc/OroCRMDotmailerBundle.git",
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMDotmailerBundle/tree/3.1",
+                "issues": "https://github.com/oroinc/OroCRMDotmailerBundle/issues"
+            },
+            "time": "2019-04-17T09:45:28+00:00"
         },
         {
             "name": "oro/crm-hangouts-call-bundle",
-            "version": "dev-master",
+            "version": "3.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMHangoutsCallBundle.git",
+                "reference": "1d63ebb903b13684c45486c3123afaeda5673984"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/google-hangout",
-                "reference": "c01883ad5e9907ce581d1794c0f283068833a68c"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMHangoutsCallBundle/zipball/1d63ebb903b13684c45486c3123afaeda5673984",
+                "reference": "1d63ebb903b13684c45486c3123afaeda5673984",
+                "shasum": ""
             },
             "require": {
                 "oro/calendar-bundle": "~3.1.1",
@@ -5837,7 +5559,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -5863,15 +5585,26 @@
                 "Google Hangouts",
                 "Oro",
                 "integration"
-            ]
+            ],
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMHangoutsCallBundle/tree/3.1",
+                "issues": "https://github.com/oroinc/OroCRMHangoutsCallBundle/issues"
+            },
+            "time": "2019-02-19T15:34:09+00:00"
         },
         {
             "name": "oro/crm-magento-embedded-contact-us",
-            "version": "dev-master",
+            "version": "3.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMMagentoContactUsBundle.git",
+                "reference": "1ff824aae01662b5f3375ce6e290aa6f2d982119"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/magento-contact-us",
-                "reference": "c4059db9299737135d2558f03f2df60922179c12"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMMagentoContactUsBundle/zipball/1ff824aae01662b5f3375ce6e290aa6f2d982119",
+                "reference": "1ff824aae01662b5f3375ce6e290aa6f2d982119",
+                "shasum": ""
             },
             "require": {
                 "oro/crm": "~3.1.1"
@@ -5879,7 +5612,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -5900,15 +5633,26 @@
                 }
             ],
             "description": "OroCRM Magento Embedded Contact Us package",
-            "homepage": "https://github.com/oroinc/OroCRMMagentoContactUsBundle.git"
+            "homepage": "https://github.com/oroinc/OroCRMMagentoContactUsBundle.git",
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMMagentoContactUsBundle/tree/3.1",
+                "issues": "https://github.com/oroinc/OroCRMMagentoContactUsBundle/issues"
+            },
+            "time": "2019-02-19T15:33:04+00:00"
         },
         {
             "name": "oro/crm-task-bundle",
-            "version": "dev-master",
+            "version": "3.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMTaskBundle.git",
+                "reference": "197212ffd110600c266b29693ca356ace493e3b7"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/task",
-                "reference": "5943134e902c1e043bed33332d76bae838b3b3be"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMTaskBundle/zipball/197212ffd110600c266b29693ca356ace493e3b7",
+                "reference": "197212ffd110600c266b29693ca356ace493e3b7",
+                "shasum": ""
             },
             "require": {
                 "oro/platform": "~3.1.1"
@@ -5916,7 +5660,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -5941,15 +5685,26 @@
             "keywords": [
                 "Oro",
                 "Task"
-            ]
+            ],
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMTaskBundle/tree/3.1",
+                "issues": "https://github.com/oroinc/OroCRMTaskBundle/issues"
+            },
+            "time": "2019-04-17T09:46:12+00:00"
         },
         {
             "name": "oro/crm-zendesk",
-            "version": "dev-master",
+            "version": "3.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMZendeskBundle.git",
+                "reference": "f139d9c36a86501781653c81c1dbd0569c64d8d6"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/zendesk",
-                "reference": "240b35ae35e553f120b1f2364129ec5276342420"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMZendeskBundle/zipball/f139d9c36a86501781653c81c1dbd0569c64d8d6",
+                "reference": "f139d9c36a86501781653c81c1dbd0569c64d8d6",
+                "shasum": ""
             },
             "require": {
                 "oro/crm": "~3.1.1"
@@ -5957,7 +5712,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -5983,7 +5738,12 @@
                 "Integration",
                 "Oro",
                 "Zendesk"
-            ]
+            ],
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMZendeskBundle/tree/3.1",
+                "issues": "https://github.com/oroinc/OroCRMZendeskBundle/issues"
+            },
+            "time": "2019-02-19T15:33:15+00:00"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -6042,11 +5802,17 @@
         },
         {
             "name": "oro/marketing",
-            "version": "dev-master",
+            "version": "3.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMMarketingBundle.git",
+                "reference": "a78aeb46cae8a366e4b810c729a741e94980a088"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/marketing",
-                "reference": "a379a24dffb75dc2e33bdbff56cab507d2f1f598"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMMarketingBundle/zipball/a78aeb46cae8a366e4b810c729a741e94980a088",
+                "reference": "a78aeb46cae8a366e4b810c729a741e94980a088",
+                "shasum": ""
             },
             "require": {
                 "oro/platform": "~3.1.1"
@@ -6054,7 +5820,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -6078,60 +5844,25 @@
                 "Marketing",
                 "Oro",
                 "Tracking"
-            ]
-        },
-        {
-            "name": "oro/oauth2-server",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/oauth2-server",
-                "reference": "63360cae13dbf32b3585f1659d31c3197266e71e"
-            },
-            "require": {
-                "league/oauth2-server": "7.3.*",
-                "oro/platform": "3.1.*",
-                "symfony/psr-http-message-bridge": "^1.0",
-                "zendframework/zend-diactoros": "^1.7"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\OAuth2ServerBundle\\": "src/Oro/Bundle/OAuth2ServerBundle"
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://oroinc.com"
-                }
-            ],
-            "description": "Oro OAuth 2.0 authorization and resource server for BAP",
-            "homepage": "https://github.com/oroinc/oauth2-server",
-            "keywords": [
-                "OAuth",
-                "OAuth2",
-                "ORO"
-            ]
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMMarketingBundle/tree/3.1"
+            },
+            "time": "2019-04-17T09:46:22+00:00"
         },
         {
             "name": "oro/platform",
-            "version": "dev-master",
+            "version": "3.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/platform.git",
+                "reference": "bba89ab0034c34785f0df225c2ca77abcafdef6a"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/platform",
-                "reference": "e433e45aa347753076901505d04b35cf191f769c"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/platform/zipball/bba89ab0034c34785f0df225c2ca77abcafdef6a",
+                "reference": "bba89ab0034c34785f0df225c2ca77abcafdef6a",
+                "shasum": ""
             },
             "require": {
                 "akeneo/batch-bundle": "0.4.*",
@@ -6162,6 +5893,7 @@
                 "bower-asset/json2": "dev-master",
                 "bower-asset/jsplumb": "1.7.*",
                 "bower-asset/lightgallery": "1.4.0",
+                "bower-asset/malihu-custom-scrollbar-plugin": "3.1.5",
                 "bower-asset/moment": "2.18.*",
                 "bower-asset/moment-timezone": "0.5.*",
                 "bower-asset/numeral": "2.0.6",
@@ -6214,7 +5946,6 @@
                 "npm-asset/bootbox": "4.1.0",
                 "npm-asset/bootstrap": "3.0.3",
                 "npm-asset/jquery.uniform": "4.2.0",
-                "npm-asset/overlayscrollbars": "1.6.*",
                 "npm-asset/requirejs": "2.3.*",
                 "npm-asset/xregexp": "3.2.*",
                 "ocramius/proxy-manager": "2.1.1",
@@ -6243,23 +5974,17 @@
                 "behat/mink-extension": "2.3.*",
                 "behat/mink-selenium2-driver": "1.*",
                 "behat/symfony2-extension": "2.1.*",
-                "friendsofphp/php-cs-fixer": "2.12.*",
-                "johnkary/phpunit-speedtrap": "2.0.*",
-                "mybuilder/phpunit-accelerator": "2.0.*",
+                "johnkary/phpunit-speedtrap": "1.0.*",
+                "mybuilder/phpunit-accelerator": "1.2.*",
                 "nelmio/alice": "2.3.*",
-                "oro/twig-inspector": "1.0.*",
                 "phpmd/phpmd": "2.6.*",
-                "phpunit/phpcov": "4.0.*",
-                "phpunit/phpunit": "6.5.*",
-                "sebastian/phpcpd": "3.0.*",
                 "sensio/generator-bundle": "3.1.*",
-                "squizlabs/php_codesniffer": "3.3.*",
-                "symfony/phpunit-bridge": "3.4.*"
+                "squizlabs/php_codesniffer": "3.3.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -6280,15 +6005,26 @@
                 }
             ],
             "description": "Business Application Platform (BAP)",
-            "homepage": "https://github.com/oroinc/platform.git"
+            "homepage": "https://github.com/oroinc/platform.git",
+            "support": {
+                "source": "https://github.com/oroinc/platform/tree/3.1",
+                "issues": "https://github.com/oroinc/platform/issues"
+            },
+            "time": "2019-04-17T09:42:30+00:00"
         },
         {
             "name": "oro/platform-serialised-fields",
-            "version": "dev-master",
+            "version": "3.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroEntitySerializedFieldsBundle.git",
+                "reference": "8eb678d565321283c33441af5148cf63136a1a27"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/serialized-fields",
-                "reference": "da90254b678c2e0b6f1df60f07bd2bf43164ba9b"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroEntitySerializedFieldsBundle/zipball/8eb678d565321283c33441af5148cf63136a1a27",
+                "reference": "8eb678d565321283c33441af5148cf63136a1a27",
+                "shasum": ""
             },
             "require": {
                 "oro/platform": "~3.1.1"
@@ -6296,7 +6032,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -6323,16 +6059,27 @@
                 "Platform",
                 "entity",
                 "fields"
-            ]
+            ],
+            "support": {
+                "source": "https://github.com/oroinc/OroEntitySerializedFieldsBundle/tree/3.1",
+                "issues": "https://github.com/oroinc/OroEntitySerializedFieldsBundle/issues"
+            },
+            "time": "2019-02-19T15:32:42+00:00"
         },
         {
             "name": "oro/redis-config",
-            "version": "dev-master",
+            "version": "3.1.2",
             "target-dir": "Oro/Bundle/RedisConfigBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/redis-config.git",
+                "reference": "a630e49ac7203387abc33156a522970e39ce20a4"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/redis-config",
-                "reference": "696fdaf47f633d49c8db3600ace88448d1f63d41"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/redis-config/zipball/a630e49ac7203387abc33156a522970e39ce20a4",
+                "reference": "a630e49ac7203387abc33156a522970e39ce20a4",
+                "shasum": ""
             },
             "require": {
                 "predis/predis": "~1.0",
@@ -6344,7 +6091,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -6362,7 +6109,8 @@
                 "OroCrm",
                 "OroPlatform",
                 "Redis"
-            ]
+            ],
+            "time": "2019-01-31T15:02:49+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -7427,9 +7175,6 @@
                 "v2",
                 "version 2"
             ],
-            "support": {
-                "source": "https://github.com/laboro/dotMailer-API-v2-PHP-client/tree/maintenance/v1.1.3"
-            },
             "time": "2017-05-25T17:29:35+00:00"
         },
         {
@@ -8417,71 +8162,6 @@
             "time": "2019-02-08T14:16:39+00:00"
         },
         {
-            "name": "symfony/psr-http-message-bridge",
-            "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/psr-http-message-bridge.git",
-                "reference": "9ab9d71f97d5c7d35a121a7fb69f74fee95cd0ad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/9ab9d71f97d5c7d35a121a7fb69f74fee95cd0ad",
-                "reference": "9ab9d71f97d5c7d35a121a7fb69f74fee95cd0ad",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1",
-                "psr/http-message": "^1.0",
-                "symfony/http-foundation": "^3.4 || ^4.0"
-            },
-            "require-dev": {
-                "nyholm/psr7": "^1.1",
-                "symfony/phpunit-bridge": "^3.4.20 || ^4.0",
-                "zendframework/zend-diactoros": "^1.4.1 || ^2.0"
-            },
-            "suggest": {
-                "nyholm/psr7": "For a super lightweight PSR-7/17 implementation"
-            },
-            "type": "symfony-bridge",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Bridge\\PsrHttpMessage\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "PSR HTTP message bridge",
-            "homepage": "http://symfony.com",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr-17",
-                "psr-7"
-            ],
-            "time": "2019-03-11T18:22:33+00:00"
-        },
-        {
             "name": "symfony/security-acl",
             "version": "v3.0.2",
             "source": {
@@ -9275,70 +8955,6 @@
                 "zf2"
             ],
             "time": "2018-08-13T20:36:59+00:00"
-        },
-        {
-            "name": "zendframework/zend-diactoros",
-            "version": "1.8.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "20da13beba0dde8fb648be3cc19765732790f46e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/20da13beba0dde8fb648be3cc19765732790f46e",
-                "reference": "20da13beba0dde8fb648be3cc19765732790f46e",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.6 || ^7.0",
-                "psr/http-message": "^1.0"
-            },
-            "provide": {
-                "psr/http-message-implementation": "1.0"
-            },
-            "require-dev": {
-                "ext-dom": "*",
-                "ext-libxml": "*",
-                "php-http/psr7-integration-tests": "dev-master",
-                "phpunit/phpunit": "^5.7.16 || ^6.0.8 || ^7.2.7",
-                "zendframework/zend-coding-standard": "~1.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.8.x-dev",
-                    "dev-develop": "1.9.x-dev",
-                    "dev-release-2.0": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/functions/create_uploaded_file.php",
-                    "src/functions/marshal_headers_from_sapi.php",
-                    "src/functions/marshal_method_from_sapi.php",
-                    "src/functions/marshal_protocol_version_from_sapi.php",
-                    "src/functions/marshal_uri_from_sapi.php",
-                    "src/functions/normalize_server.php",
-                    "src/functions/normalize_uploaded_files.php",
-                    "src/functions/parse_cookie_header.php"
-                ],
-                "psr-4": {
-                    "Zend\\Diactoros\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "description": "PSR HTTP Message implementations",
-            "homepage": "https://github.com/zendframework/zend-diactoros",
-            "keywords": [
-                "http",
-                "psr",
-                "psr-7"
-            ],
-            "time": "2018-09-05T19:29:37+00:00"
         },
         {
             "name": "zendframework/zend-eventmanager",
@@ -10485,7 +10101,7 @@
                     "email": "shelburt02@gmail.com"
                 },
                 {
-                    "name": "Théo FIDRY",
+                    "name": "Théo Fidry",
                     "email": "theo.fidry@gmail.com"
                 }
             ],
@@ -10500,11 +10116,17 @@
         },
         {
             "name": "oro/twig-inspector",
-            "version": "dev-master",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/twig-inspector.git",
+                "reference": "226f54e781801549c467dad3f395982fc6ec9ec5"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/twig-inspector",
-                "reference": "64de52d5b5b41db3c80e942828ed95a12f4e8e96"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/twig-inspector/zipball/226f54e781801549c467dad3f395982fc6ec9ec5",
+                "reference": "226f54e781801549c467dad3f395982fc6ec9ec5",
+                "shasum": ""
             },
             "require": {
                 "symfony/config": "^3.4",
@@ -10544,7 +10166,12 @@
                 "template",
                 "toolbar-extension",
                 "twig"
-            ]
+            ],
+            "support": {
+                "source": "https://github.com/oroinc/twig-inspector/tree/1.0.0",
+                "issues": "https://github.com/oroinc/twig-inspector/issues"
+            },
+            "time": "2018-08-19T20:22:28+00:00"
         },
         {
             "name": "pdepend/pdepend",
@@ -12068,16 +11695,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.4.24",
+            "version": "v3.4.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "bf7ca5d4d7eb1758a1f7bed11111f630ac2d4f57"
+                "reference": "a43a2f6c465a2d99635fea0addbebddc3864ad97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/bf7ca5d4d7eb1758a1f7bed11111f630ac2d4f57",
-                "reference": "bf7ca5d4d7eb1758a1f7bed11111f630ac2d4f57",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/a43a2f6c465a2d99635fea0addbebddc3864ad97",
+                "reference": "a43a2f6c465a2d99635fea0addbebddc3864ad97",
                 "shasum": ""
             },
             "require": {
@@ -12129,7 +11756,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2019-03-22T08:11:54+00:00"
+            "time": "2019-04-16T09:03:16+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
@@ -12269,21 +11896,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "oro/crm": 20,
-        "oro/platform": 20,
-        "oro/crm-task-bundle": 20,
-        "oro/crm-call-bundle": 20,
-        "oro/calendar-bundle": 20,
-        "oro/marketing": 20,
-        "oro/platform-serialised-fields": 20,
-        "oro/oauth2-server": 20,
-        "oro/crm-hangouts-call-bundle": 20,
-        "oro/crm-magento-embedded-contact-us": 20,
-        "oro/crm-dotmailer": 20,
-        "oro/crm-zendesk": 20,
-        "oro/redis-config": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

@@ -1,26 +1,38 @@
-OroCRM Sample Application
-=========================
+OroCRM 3.6 starter - Docker
+===
 
-What is OroCRM?
----------------
+## Install with DOCKER
+Install docker [here](https://docs.docker.com/compose/install/#prerequisites)
+```
+$ make          # self documented makefile
+$ make install  # install and start the project
+```
 
-OroCRM is an open-source customer relationship Management application built with flexibility in mind. It can be customized and extended to fit any business needs.
-You can find out more about OroCRM at [www.orocrm.com](https://www.orocrm.com/).
+#### Vhost
+```
+127.0.0.1 orocrm.local
+```
 
-OroCRM Community Edition is an example of a fully functional [OroCRM](https://github.com/oroinc/crm) application which can be used as is or customized to meet
-your business needs.
+#### Test website
+Go to [login page](https://orocrm.local/user/login) (admin@orocrm.com / admin)
 
-System Requirements
--------------------
+#### Email: Mailhog
+Go [here](http://localhost:8025/) to see all mails sent.
 
-Please see the OroCRM online documentation for the complete list of [system requirements](https://oroinc.com/doc/orocrm/current/system-requirements).
-
-Installation
-------------
-
-Please see the [Quick Start Installation Hints for OroCRM Community Edition](https://oroinc.com/doc/orocrm/current/install-upgrade/installation-quick-start-dev/crm) or refer to the online [OroCRM Installation Guide](https://oroinc.com/doc/orocrm/current/install-upgrade) for the detailed installation steps.
-
-License
--------
- 
-[OSL-3.0](LICENSE) Copyright (c) 2015 - 2017, Oro, Inc.
+## Know issues
+```
+Class Extend\Entity\EX_OroLocaleBundle_Localization does not exist
+```
+Launch:
+```
+$ docker-compose exec redis redis-cli -p 6379 flushall
+$ docker-compose exec language php bin/console oro:entity-extend:cache:warmup
+```
+---
+```
+The process "'/usr/local/bin/php' 'bin/console' 'oro:requirejs:build' '--no-debug'" exceeded the timeout of 900 seconds.
+```
+Launch:
+```
+$ make assets
+```
