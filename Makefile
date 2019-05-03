@@ -49,6 +49,10 @@ reset: kill install
 install: ## Install and start the project
 install: .env config/parameters.yml build start-certbot sync-ssl start db assets
 
+oro-install:
+	$(CONSOLE) oro:install --env=prod --timeout=900 --no-debug --application-url="https://$(APP_SERVER_NAME)/" --organization-name="$(ORGANIZATION_NAME)" --user-name="admin" --user-email="admin@example.com" --user-firstname="Bob" --user-lastname="Dylan" --user-password="admin" --sample-data=false --language=en --formatting-code=en_US
+
+
 install-nocache: ## Install with no cache on docker and start the project
 install-nocache: .env build-nocache start db assets
 
@@ -151,7 +155,7 @@ tf: vendor
 
 # rules based on files
 composer.lock: composer.json
-	$(COMPOSER) update --lock --no-scripts --no-interaction
+	$(COMPOSER) install
 
 vendor: composer.lock
 	$(COMPOSER) install

@@ -17,12 +17,10 @@ monolog:
             type:           service
             id:             oro_logger.monolog.detailed_logs.handler
             handler:        nested
-            channels:       ["!consumer"]
         nested:
             type:           stream
             path:           "%kernel.logs_dir%/%kernel.environment%.log"
             level:          debug
-            channels:       ["!consumer"]
 
         fingers_crossed:
             type:           fingers_crossed

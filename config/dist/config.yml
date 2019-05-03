@@ -16,7 +16,7 @@ framework:
     csrf_protection: true
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig', 'php'] } #assets_version: SomeVersionScheme
-    default_locale:  en
+    default_locale:           "%locale%"
     session:
         name:                 BAPID_DIST
         handler_id:           "%session_handler%"
@@ -27,11 +27,10 @@ framework:
         enabled:              true
         path:                 /_fragment # used for controller action in template
 
+# Twig Configuration
 twig:
     debug:                    "%kernel.debug%"
     strict_variables:         "%kernel.debug%"
-    globals:
-        help_url: https://www.oroinc.com/doc/orocrm/current/install-upgrade
 
 lexik_maintenance:
     driver:
@@ -48,6 +47,15 @@ services:
          class:               Twig_Extensions_Extension_Intl
          tags:
              - { name: twig.extension }
+
+oro_help:
+    defaults:
+        server: http://help.orocrm.com/
+        prefix: Third_Party
+    vendors:
+        Oro:
+            prefix: ~
+            alias: Platform
 
 monolog:
     handlers:

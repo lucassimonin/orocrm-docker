@@ -21,7 +21,7 @@ framework:
     assets:
         version: "%assets_version%"
         version_format: "%%s?version=%%s"
-    default_locale: en
+    default_locale:           "en"
     session:
         name:                 CRMID
         handler_id:           "%session_handler%"
@@ -134,12 +134,29 @@ oro_require_js:
         optimize: "uglify2"
         preserveLicenseComments: true
 
+oro_help:
+    defaults:
+        server: http://help.orocrm.com/
+        prefix: Third_Party
+    vendors:
+        Oro:
+            prefix: ~
+            alias: Platform
+        OroCRM:
+            prefix: ~
+            alias: CRM
+    routes:
+        oro_default:
+            uri: Platform/OroDashboardBundle
+
 oro_theme:
     active_theme: oro
 
 oro_message_queue:
     transport:
+        default: '%message_queue_transport%'
         '%message_queue_transport%': '%message_queue_transport_config%'
+    client: ~
 
 oro_locale:
     formatting_code: en

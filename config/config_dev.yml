@@ -14,10 +14,9 @@ web_profiler:
 monolog:
     handlers:
         main:
-            type:      stream
-            path:      "%kernel.logs_dir%/%kernel.environment%.log"
-            level:     debug
-            channels:  ["!consumer"]
+            type:  stream
+            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
 
         # collect all log records to buffer and write them to log file on CLI command error
         message_queue.consumer.console_error:
