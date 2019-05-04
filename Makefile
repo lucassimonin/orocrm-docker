@@ -50,7 +50,7 @@ install: ## Install and start the project
 install: .env config/parameters.yml build start-certbot sync-ssl start db assets
 
 oro-install:
-	$(CONSOLE) oro:install --env=prod --timeout=900 --no-debug --application-url="https://$(APP_SERVER_NAME)/" --organization-name="$(ORGANIZATION_NAME)" --user-name="admin" --user-email="admin@example.com" --user-firstname="Bob" --user-lastname="Dylan" --user-password="admin" --sample-data=false --language=en --formatting-code=en_US
+	$(CONSOLE) oro:install --env=dev --timeout=900 --no-debug --application-url="https://$(APP_SERVER_NAME)/" --organization-name="$(ORGANIZATION_NAME)" --user-name="admin" --user-email="admin@example.com" --user-firstname="Bob" --user-lastname="Dylan" --user-password="admin" --sample-data=false --language=en --formatting-code=en_US
 
 
 install-nocache: ## Install with no cache on docker and start the project
@@ -113,6 +113,9 @@ assets:
 clear: ## clear cache
 clear: .env vendor
 	$(CONSOLE) cache:clear --env=dev
+
+clear-api:
+	$(CONSOLE) oro:api:doc:cache:clear --env=dev
 
 flush: ## Flush db
 flush: .env vendor

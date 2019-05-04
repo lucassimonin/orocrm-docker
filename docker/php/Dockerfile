@@ -67,15 +67,24 @@ RUN if [ -z `getent group www-data` ]; then addgroup -g ${GUID} www-data; fi
 RUN if [ -z `getent passwd www-data` ]; then useradd -m -u ${UID} -g ${GUID} www-data; fi
 
 RUN cp /usr/share/zoneinfo/Europe/Paris /etc/localtime
+RUN mkdir -p /srv/var/logs /srv/var/cache
 
 RUN chown -R www-data:www-data /srv/
 
+RUN apk add --update busybox-suid
 
+RUN mkdir /etc/periodic/everymin
+COPY cron/orocron /etc/periodic/everymin
+RUN chmod a+x /etc/periodic/everymin/orocron
+RUN echo "*       *       *       *       *       run-parts /etc/periodic/everymin" >> /etc/crontabs/root
+RUN apk add sudo
+RUN echo "www-data ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/www-data && \
+        chmod 0440 /etc/sudoers.d/www-data
 
 USER www-data
 
 RUN echo "alias ll='ls -l'" >> ~/.bashrc
 
-CMD ["php-fpm"]
+ENTRYPOINT ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
 
 EXPOSE 9000

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+php /srv/bin/console oro:cron --env=dev >> /srv/var/logs/cron.log 2>&1

@@ -39,6 +39,7 @@ services:
       - "./:/project"
 
   language:
+    user: www-data
     build:
       context: "docker/php"
       args:
@@ -48,7 +49,22 @@ services:
     expose:
       - '9000'
     volumes:
-      - "./:/srv:cached"
+      - "./bin:/srv/bin:rw"
+      - "./config:/srv/config:rw"
+      - "./public:/srv/public:rw"
+      - "./src:/srv/src:rw"
+      - "./templates:/srv/templates:rw"
+      - "./translations:/srv/translations:rw"
+      - "./var/attachment:/srv/var/attachment:rw"
+      - "./var/import_export:/srv/var/import_export:rw"
+      - "./var/OroRequirements.php:/srv/var/OroRequirements.php:rw"
+      - "./vendor:/srv/vendor:rw"
+      - "./composer.json:/srv/composer.json:rw"
+      - "./composer.lock:/srv/composer.lock:rw"
+      - "./dev.json:/srv/dev.json:rw"
+      - "./dev.lock:/srv/dev.lock:rw"
+      - "./phpunit.xml.dist:/srv/phpunit.xml.dist:rw"
+      - "./webpack.config.js:/srv/webpack.config.js:rw"
 
 
   mailing:
