@@ -24,7 +24,7 @@ Go to [login page](https://orocrm.local/user/login) (admin@orocrm.com / admin)
 Go [here](http://localhost:8025/) to see all mails sent.
 
 ## Good to know
-####Reset installation
+#### Reset installation
 
 - set parameter `installed: false` in config/parameters.yml.
 - remove cache
