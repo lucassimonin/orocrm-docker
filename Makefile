@@ -2,6 +2,7 @@ DOCKER_COMPOSE  = docker-compose
 
 EXEC_FRONT      = $(DOCKER_COMPOSE) exec -T front
 EXEC_PHP        = $(DOCKER_COMPOSE) exec -T language
+EXEC_REDIS      = $(DOCKER_COMPOSE) exec -T redis
 EXEC_CERTBOT    = $(DOCKER_COMPOSE) exec -T certbot
 
 CONSOLE         = $(EXEC_PHP) php bin/console
@@ -47,10 +48,10 @@ reset: ## Stop and start a fresh install of the project
 reset: kill install
 
 install: ## Install and start the project
-install: .env config/parameters.yml build start-certbot sync-ssl start db assets
+install: .env config/parameters.yml build start-certbot sync-ssl start oro-warmup-cache oro-install
 
 oro-install:
-	$(CONSOLE) oro:install --env=dev --timeout=900 --no-debug --application-url="https://$(APP_SERVER_NAME)/" --organization-name="$(ORGANIZATION_NAME)" --user-name="admin" --user-email="admin@example.com" --user-firstname="Bob" --user-lastname="Dylan" --user-password="admin" --sample-data=false --language=en --formatting-code=en_US
+	$(CONSOLE) oro:install --env=dev --timeout=2000 --no-debug --application-url="https://$(APP_SERVER_NAME)/" --organization-name="$(ORGANIZATION_NAME)" --user-name="admin" --user-email="admin@admin.com" --user-firstname="Bob" --user-lastname="Dylan" --user-password="admin" --sample-data=false --language=en --formatting-code=en_US
 
 
 install-nocache: ## Install with no cache on docker and start the project
@@ -81,6 +82,15 @@ config/parameters.yml: config/parameters.yml.dev
 ## Utils
 ## -----
 ##
+
+flush-redis: ## Flush redis
+flush-redis:
+	$(EXEC_REDIS) redis-cli -p 6379 flushall
+
+oro-warmup-cache: ## Warmup cache
+oro-warmup-cache: flush-redis
+	$(CONSOLE) oro:entity-extend:cache:warmup
+
 
 db: ## Reset the database and load fixtures
 db: flush .env vendor
