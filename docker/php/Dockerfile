@@ -69,8 +69,6 @@ RUN if [ -z `getent passwd www-data` ]; then useradd -m -u ${UID} -g ${GUID} www
 RUN cp /usr/share/zoneinfo/Europe/Paris /etc/localtime
 RUN mkdir -p /srv/var/logs /srv/var/cache
 
-RUN chown -R www-data:www-data /srv/
-
 RUN apk add --update busybox-suid
 
 RUN mkdir /etc/periodic/everymin
@@ -80,6 +78,7 @@ RUN echo "*       *       *       *       *       run-parts /etc/periodic/everym
 RUN apk add sudo
 RUN echo "www-data ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/www-data && \
         chmod 0440 /etc/sudoers.d/www-data
+RUN chown -R www-data:www-data /srv/
 
 USER www-data
 
