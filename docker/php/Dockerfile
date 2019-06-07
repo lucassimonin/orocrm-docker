@@ -23,12 +23,12 @@ RUN docker-php-ext-configure intl --enable-intl
 #RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing/ gnu-libiconv-dev && \
 #(mv /usr/bin/gnu-iconv /usr/bin/iconv; mv /usr/include/gnu-libiconv/*.h /usr/include; rm -rf /usr/include/gnu-libiconv)
 
-RUN pecl install xdebug-2.7.1
-COPY conf/xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+#RUN pecl install xdebug-2.7.1
+#COPY conf/xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
-RUN if [ $XDEBUG = "true" ] ; then \
-docker-php-ext-enable xdebug; \
-fi ;
+#RUN if [ $XDEBUG = "true" ] ; then \
+#docker-php-ext-enable xdebug; \
+#fi ;
 
 COPY conf/opcache.ini /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
 
@@ -53,6 +53,7 @@ RUN apk add --no-cache freetype libpng libjpeg-turbo freetype-dev libpng-dev lib
 RUN apk add unzip zlib-dev chromium chromium-chromedriver
 ENV PANTHER_NO_SANDBOX 1
 ENV PANTHER_CHROME_DRIVER_BINARY /usr/lib/chromium/chromedriver
+ENV COMPOSER_MEMORY_LIMIT -1
 
 RUN apk add supervisor
 COPY conf/supervisord.conf /etc/supervisord.conf

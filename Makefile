@@ -9,6 +9,7 @@ CONSOLE         = $(EXEC_PHP) php bin/console
 COMPOSER        = $(EXEC_PHP) composer
 QA				= $(DOCKER_COMPOSE) exec -T quality
 YARN         	= $(EXEC_FRONT) yarn
+TIMEOUT         = 5000
 
 
 ifneq ("$(wildcard .env)","")
@@ -48,14 +49,17 @@ reset: ## Stop and start a fresh install of the project
 reset: kill install
 
 install: ## Install and start the project
-install: .env config/parameters.yml build start-certbot sync-ssl start oro-warmup-cache oro-install
+install: .env config/parameters.yml build start-certbot sync-ssl start composer-install oro-warmup-cache oro-install assets
 
 oro-install:
-	$(CONSOLE) oro:install --env=dev --timeout=10000 --no-debug --application-url="https://$(APP_SERVER_NAME)/" --organization-name="$(ORGANIZATION_NAME)" --user-name="admin" --user-email="admin@admin.com" --user-firstname="Bob" --user-lastname="Dylan" --user-password="admin" --sample-data=false --language=en --formatting-code=en_US
+	$(CONSOLE) oro:install --env=dev --timeout=$(TIMEOUT) --no-debug --application-url="https://$(APP_SERVER_NAME)/" --organization-name="$(ORGANIZATION_NAME)" --user-name="admin" --user-email="admin@admin.com" --user-firstname="Bob" --user-lastname="Dylan" --user-password="admin" --sample-data=false --language=en --formatting-code=en_US
 
 
 install-nocache: ## Install with no cache on docker and start the project
 install-nocache: .env build-nocache start db assets
+
+composer-install: .env
+	$(COMPOSER) install
 
 deploy: .env vendor db-update
 	rm -rf var/cache/*
@@ -89,7 +93,6 @@ flush-redis:
 
 oro-warmup-cache: ## Warmup cache
 oro-warmup-cache: flush-redis .env
-	$(COMPOSER) install
 	$(CONSOLE) oro:entity-extend:cache:warmup
 
 
@@ -119,7 +122,7 @@ db-load-fixture: .env vendor
 
 assets: ## Install assets OroCRM
 assets:
-	$(CONSOLE) oro:assets:install --timeout=900
+	$(CONSOLE) oro:assets:install --timeout=$(TIMEOUT)
 
 clear: ## clear cache
 clear: .env vendor
