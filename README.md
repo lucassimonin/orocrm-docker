@@ -1,4 +1,4 @@
-OroCRM 3.6 starter - Docker
+OroCRM 3.8 starter - Docker
 ===
 
 ## Install with DOCKER
