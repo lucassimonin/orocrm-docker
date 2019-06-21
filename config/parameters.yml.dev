@@ -23,7 +23,7 @@ parameters:
     websocket_backend_host:                "*"        # Websocket host the application server will connect to
     websocket_backend_port:                8080       # Websocket port the application server will connect to
     websocket_backend_path:                ""         # Websocket url path the application server will connect to (for example "/websocket" or "/ws")
-    websocket_backend_transport:           tcp        # Socket transport (for example "tcp", "ssl" or "tls")
+    websocket_backend_transport:           "ssl"        # Socket transport (for example "tcp", "ssl" or "tls")
     websocket_backend_ssl_context_options: {}         # Socket context options, usually needed when using secure transport
 
     # Used to hide backend under specified prefix, should be started with "/", for instance "/admin"

@@ -1,3 +1,4 @@
+supervisord.pid
 /.settings
 /.buildpath
 /.project

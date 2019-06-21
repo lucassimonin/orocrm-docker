@@ -1,0 +1,13 @@
+navigation:
+    menu_config:
+        items:
+            vehicles_view:
+                label: Vehicles
+                route: inventory.vehicle_index
+        tree:
+            application_menu:
+                children:
+                    customers_tab:
+                        merge_strategy: append
+                        children:
+                            vehicles_view: ~

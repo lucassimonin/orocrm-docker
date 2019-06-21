@@ -1,0 +1,93 @@
+datagrids:
+    vehicles-grid:
+        source:
+            acl_resource: inventory.vehicle_view
+            type: orm
+            query:
+                select:
+                    - v.id
+                    - v.model
+                    - v.seats
+                    - v.boughtAt
+                    - v.leasedUntil
+                from:
+                    - { table: AppBundle:Vehicle, alias: v }
+        columns:
+            model:
+                label: Model
+            seats:
+                label: '# Seats'
+            boughtAt:
+                label: Bought at
+                frontend_type: date
+            leasedUntil:
+                label: Leased until
+                frontend_type: date
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: inventory.vehicle_update
+                params:
+                    - id
+            view_link:
+                type: url
+                route: inventory.vehicle_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: inventory_api_delete_vehicle
+                params:
+                    - id
+        sorters:
+            columns:
+                model:
+                    data_name: v.model
+                seats:
+                    data_name: v.seats
+                boughtAt:
+                    data_name: v.boughtAt
+                leasedUntil:
+                    data_name: v.leasedUntil
+            default:
+                model: ASC
+        filters:
+            columns:
+                model:
+                    type: string
+                    data_name: v.model
+                seats:
+                    type: number
+                    data_name: v.seats
+                boughtAt:
+                    type: date
+                    data_name: v.boughtAt
+                leasedUntil:
+                    type: date
+                    data_name: v.leasedUntil
+        actions:
+            view:
+                type:          navigate
+                label:         View
+                link:          view_link
+                icon:          eye-open
+                acl_resource:  inventory.vehicle_view
+                rowAction:     true
+            update:
+                type:          navigate
+                label:         Update
+                link:          update_link
+                icon:          edit
+                acl_resource:  inventory.vehicle_update
+            delete:
+                type:          delete
+                label:         Delete
+                link:          delete_link
+                icon:          trash
+                acl_resource:  inventory.vehicle_delete
+    recent-vehicles-grid:
+        extends: vehicles-grid
+        sorters:
+            default:
+                id: DESC

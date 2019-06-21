@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: custom/doctrine.yml }
+    - { resource: services.yml }
 
 framework:
     #esi:             ~

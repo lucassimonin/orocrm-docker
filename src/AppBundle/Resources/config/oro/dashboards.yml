@@ -1,0 +1,14 @@
+dashboards:
+    widgets:
+        recent_vehicles:
+            label: Recent Vehicles
+            route: oro_dashboard_widget
+            icon_class:  fa-car
+            route_parameters:
+                bundle: AppBundle
+                name: recent_vehicles_widget
+            description: This widget displays the most recent vehicles
+        hello_word:
+            label: Hello
+            route: hello_word_widget
+            icon_class: fa-info-circle

@@ -1,0 +1,60 @@
+{% extends 'OroUIBundle:actions:view.html.twig' %}
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+{% block navButtons %}
+    {% if is_granted('EDIT', vehicle) %}
+        {{ UI.editButton({
+            'path' : path('inventory.vehicle_update', { id: vehicle.id }),
+            'entity_label': 'Vehicle'|trans
+        }) }}
+    {% endif %}
+
+    {% if is_granted('DELETE', vehicle) %}
+        {{ UI.deleteButton({
+            'dataUrl': path('inventory_api_delete_vehicle', {'id': vehicle.id}),
+            'dataRedirect': path('inventory.vehicle_index'),
+            'aCss': 'no-hash remove-button',
+            'id': 'btn-remove-vehicle',
+            'dataId': vehicle.id,
+            'entity_label': 'Vehicle'|trans,
+        }) }}
+    {% endif %}
+{% endblock navButtons %}
+
+{% block pageHeader %}
+    {% set breadcrumbs = {
+        'entity':      vehicle,
+        'indexPath':   path('inventory.vehicle_index'),
+        'indexLabel': 'Vehicles'|trans,
+        'entityTitle': vehicle.model
+    } %}
+    {{ parent() }}
+{% endblock pageHeader %}
+
+{% block content_data %}
+    {% set data %}
+        <div class="widget-content">
+            <div class="row-fluid form-horizontal">
+                <div class="responsive-block">
+                    {{ UI.renderProperty('Model'|trans, vehicle.model) }}
+                    {{ UI.renderProperty('Seats'|trans, vehicle.seats) }}
+                    {{ UI.renderProperty('Bought at'|trans, vehicle.boughtAt|date) }}
+                    {{ UI.renderProperty('Leased until'|trans, vehicle.leasedUntil|date) }}
+                </div>
+            </div>
+        </div>
+    {% endset %}
+    {% set dataBlocks = [
+        {
+            'title': 'Data'|trans,
+            'class': 'active',
+            'subblocks': [
+            { 'data' : [data] }
+        ]
+        }
+    ] %}
+
+    {% set id = 'vehicleView' %}
+    {% set data = { 'dataBlocks': dataBlocks } %}
+    {{ parent() }}
+{% endblock content_data %}

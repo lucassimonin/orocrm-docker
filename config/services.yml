@@ -1,0 +1,33 @@
+services:
+    inventory.form.type.vehicle:
+        class: AppBundle\Form\Type\VehicleType
+        tags:
+            - { name: form.type, alias: inventory_vehicle }
+
+    inventory.form.vehicle.api:
+        class: Symfony\Component\Form\Form
+        factory: ['@form.factory', createNamed]
+        arguments: ["vehicle", AppBundle\Form\Type\VehicleApiType, null]
+
+    inventory.vehicle.manager.api:
+        class: Oro\Bundle\SoapBundle\Entity\Manager\ApiEntityManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - AppBundle\Entity\Vehicle
+            - "@doctrine.orm.entity_manager"
+
+    inventory.vehicle.handler.delete:
+        class: AppBundle\Handler\VehicleDeleteHandler
+        parent: oro_soap.handler.delete.abstract
+
+    inventory.form.handler.vehicle.api:
+        class: AppBundle\Form\Handler\VehicleHandler
+        arguments:
+            - '@inventory.form.vehicle.api'
+            - '@request_stack'
+            - '@doctrine.orm.entity_manager'
+
+    inventory.event_listener.datagrid.customer:
+        class: AppBundle\EventListener\Datagrid\CustomerDatagridListener
+        tags:
+            - { name: kernel.event_listener, event: oro_datagrid.datagrid.build.before.users-grid, method: onBuildBefore }

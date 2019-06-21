@@ -1,0 +1,16 @@
+{% extends 'OroDashboardBundle:Dashboard:widget.html.twig' %}
+{% import 'OroDataGridBundle::macros.html.twig' as dataGrid %}
+
+{% block content %}
+    {{ dataGrid.renderGrid('recent-vehicles-grid') }}
+{% endblock %}
+
+{% block actions %}
+    {% set actions = [{
+        'url': path('inventory.vehicle_index'),
+        'type': 'link',
+        'label': 'All vehicles',
+    }] %}
+
+    {{ parent() }}
+{% endblock %}

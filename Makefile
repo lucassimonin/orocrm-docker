@@ -106,12 +106,12 @@ db: flush .env vendor
 db-diff: ## create migration file
 db-diff: flush .env vendor
 	$(CONSOLE) doctrine:cache:clear-metadata
-	$(CONSOLE) doctrine:migrations:diff --no-interaction
+	$(CONSOLE) doctrine:schema:update --dump-sql
 
 db-update: ## Update database
 db-update: flush .env vendor
 	$(CONSOLE) doctrine:cache:clear-metadata
-	$(CONSOLE) doctrine:migrations:migrate --no-interaction --allow-no-migration
+	$(CONSOLE) doctrine:schema:update --force
 
 db-validate-schema: ## Validate the doctrine ORM mapping
 db-validate-schema: .env vendor
